@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #98e0ff;
+  padding: 2% 10px;
+}
+header p {
+  text-align: center;
+  font-family: cursive;
+  font-size: clamp(10px, 5vw, 40px);
+  margin: auto;
+}
+
+main .contanier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main .todo--outer--container {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+main #add--todo {
+  margin: 20px auto;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #add--todo input#addTodo {
+  border: none;
+  height: 30px;
+  border-radius: 7px;
+}
+main #todo--list {
+  max-width: 400px;
+  margin: auto;
+}
+main .todo--item {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: fantasy;
+  letter-spacing: 5px;
+  width: 100%;
+  font-size: clamp(10px, 5vw, 40px);
+}/*# sourceMappingURL=todo.css.map */
