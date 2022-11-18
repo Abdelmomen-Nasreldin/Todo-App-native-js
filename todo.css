@@ -1,61 +1,161 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: cursive;
 }
 
 * {
   box-sizing: border-box;
+  word-break: break-all;
 }
 
 header {
-  background-color: #98e0ff;
-  padding: 2% 10px;
+  background-color: #ce6b6b;
+  color: #fff;
+  padding: 15px 10px;
 }
 header p {
   text-align: center;
-  font-family: cursive;
-  font-size: clamp(10px, 5vw, 40px);
+  font-size: 2em;
   margin: auto;
 }
 
-main .contanier {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+main {
+  min-height: calc(100vh - 66.8px - 66.8px);
+  background-color: #f7f7f7;
+  padding: 15px 0;
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+  gap: 20px;
+  justify-content: space-around;
 }
 main .todo--outer--container {
+  display: flex;
+  flex-direction: column;
   background: #f0f0f0;
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
 }
-main #add--todo {
-  margin: 20px auto;
-  max-width: 400px;
+main #addTodo {
+  font-size: 1.2em;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  min-height: 35px;
 }
-main #add--todo input#addTodo {
+main #addTodo input#addTodoInput {
+  min-height: 35px;
   border: none;
-  height: 30px;
+  outline: none;
   border-radius: 7px;
+  padding: 0 10px;
+  box-shadow: 0px 0px 4px 1px #dadada;
+  margin: 10px auto;
+  max-width: 100%;
+}
+main #addTodo button {
+  min-height: 35px;
+  background: #ce6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
 }
 main #todo--list {
   max-width: 400px;
   margin: auto;
 }
-main .todo--item {
+main #todoDoneItems {
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main h3 {
+  text-align: center;
+}
+
+.todo--item {
   display: flex;
   align-items: center;
+  margin: 10px 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px #ce6b6b;
+  font-size: 1.2em;
+}
+
+.todo--item--text {
+  flex: 1;
+}
+
+.todo--item--done {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.todo--item--done input {
+  accent-color: #ce6b6b;
+  width: 18px;
+  min-height: 18px;
 }
 
 footer {
-  background: black;
+  background: #ce6b6b;
   color: #fff;
   text-align: center;
-  padding: 10px 10px;
-  font-family: fantasy;
-  letter-spacing: 5px;
+  padding: 15px 10px;
   width: 100%;
-  font-size: clamp(10px, 5vw, 40px);
+  font-size: 2em;
+}
+footer p {
+  margin: 0;
+}
+
+.error {
+  border: 3px solid #ffaeae !important;
 }/*# sourceMappingURL=todo.css.map */

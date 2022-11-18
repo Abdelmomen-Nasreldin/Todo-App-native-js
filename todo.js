@@ -9,7 +9,7 @@ let addTodoHandler = () => { // the short way
     let copyTodoItem = firstTodoItem.cloneNode(true);
     copyTodoItem.firstElementChild.innerText = addTodoInput.value;
     // copyTodoItem.id = `${idGenerator++}`;
-    todoList.append(copyTodoItem);
+    todoList.prepend(copyTodoItem);
 };
 //////////////////////////
 let idGenerator = 1;
@@ -24,7 +24,15 @@ let createElementTemplateHandler = (
     todoItemType.classList.add(elementClassName);
     return todoItemType;
 };
-
+let checkIfThereIsInputValue = () => {
+    let inputValue = addTodoInput.value
+    if (inputValue < 1) {
+        addTodoInput.classList.add("error");
+        return
+    }
+    addTodoInput.classList.remove("error");
+    return inputValue
+}
 let createTodoItemDomHandler = (todoText) => {
     let todoItemText = createElementTemplateHandler(
         "div",
@@ -57,11 +65,14 @@ let createTodoItemDomHandler = (todoText) => {
 };
 
 let addTodoHandlerAlternative = () => {
+    if (!checkIfThereIsInputValue()) {
+        return;
+    }
     let todoItemDom = createTodoItemDomHandler(addTodoInput.value);
     let todoItem = createElementTemplateHandler("div", todoItemDom, "todo--item");
     todoItem.id = `${idGenerator++}`;
     // let todoItemInnerHtml =  todoItemText + todoItemDone + todoItemDelete; // Not working
-    todoList.append(todoItem)
+    todoList.prepend(todoItem)
 };
 
 
