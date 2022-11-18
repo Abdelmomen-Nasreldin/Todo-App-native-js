@@ -1,162 +1,162 @@
 $main-color: #ce6b6b;
 $main-padding: 15px;
 body {
-    padding: 0;
-    margin: 0;
-    font-family: cursive;
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
 }
 
 * {
-    box-sizing: border-box;
-    word-break: break-all;
+  box-sizing: border-box;
+  word-break: break-all;
 }
 header {
-    // background-color: #98e0ff;
-    background-color: $main-color;
-    color: #fff;
-    padding: $main-padding 10px;
+  // background-color: #98e0ff;
+  background-color: $main-color;
+  color: #fff;
+  padding: $main-padding 10px;
 
-    .contanier {
-    }
-    p {
-        text-align: center;
-        font-size: 2em;
-        margin: auto;
-    }
+  .contanier {
+  }
+  p {
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+  }
 }
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
 
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) {
-        max-width: 540px;
-    }
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        max-width: 720px;
-    }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-        max-width: 960px;
-    }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
 
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
 
-    @media (min-width: 1400px) {
-        max-width: 1320px;
-    }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
 }
 main {
-    min-height: calc(100vh - 66.8px - 66.8px);
-    background-color: #f7f7f7;
-    padding: $main-padding 0;
+  min-height: calc(100vh - 66.8px - 66.8px);
+  background-color: #f7f7f7;
+  padding: $main-padding 0;
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-        gap: 20px;
-        justify-content: space-around;
-    }
-    .todo--outer--container {
-        display: flex;
-        flex-direction: column;
-        background: #f0f0f0;
-        padding: $main-padding;
-        height: fit-content;
-        border-radius: 10px;
-    }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .todo--outer--container {
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0;
+    padding: $main-padding;
+    height: fit-content;
+    border-radius: 10px;
+  }
 
-    #addTodo {
-        font-size: 1.2em;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        min-height: 35px;
+  #addTodo {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 35px;
 
-        input#addTodoInput {
-            min-height: 35px;
-            border: none;
-            outline: none;
-            border-radius: 7px;
-            padding: 0 10px;
-            box-shadow: 0px 0px 4px 1px #dadada;
-            margin: 10px auto;
-            max-width: 100%;
-        }
-        button {
-            min-height: 35px;
-            background: $main-color;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px auto;
-        }
+    input#addTodoInput {
+      min-height: 35px;
+      border: none;
+      outline: none;
+      border-radius: 7px;
+      padding: 0 10px;
+      box-shadow: 0px 0px 4px 1px #dadada;
+      margin: 10px auto;
+      max-width: 100%;
     }
+    button {
+      min-height: 35px;
+      background: $main-color;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto;
+    }
+  }
 
-    #todo--list {
-        max-width: 400px;
-        margin: auto;
-    }
+  #todo--list {
+    max-width: 400px;
+    margin: auto;
+  }
 
-    #todoDoneItems {
-        padding: 10px $main-padding;
-        background: #f0f0f0;
-        border-radius: 10px;
-        height: fit-content;
-    }
-    h3 {
-        text-align: center;
-    }
+  #todoDoneItems {
+    padding: 10px $main-padding;
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: fit-content;
+  }
+  h3 {
+    text-align: center;
+  }
 }
 .todo--item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px $main-color;
-    font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px $main-color;
+  font-size: 1.2em;
 }
 .todo--item--text {
-    flex: 1;
+  flex: 1;
 }
 .todo--item--done {
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-    input {
-        accent-color: $main-color;
-        width: 18px;
-        min-height: 18px;
-    }
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  input {
+    accent-color: $main-color;
+    width: 18px;
+    min-height: 18px;
+  }
 }
 
 footer {
-    background: $main-color;
-    color: #fff;
-    text-align: center;
-    padding: $main-padding 10px;
-    // letter-spacing: 5px;
-    width: 100%;
-    font-size: 2em;
-    p {
-        margin: 0;
-    }
+  background: $main-color;
+  color: #fff;
+  text-align: center;
+  padding: $main-padding 10px;
+  // letter-spacing: 5px;
+  width: 100%;
+  font-size: 2em;
+  p {
+    margin: 0;
+  }
 }
 
 .error {
-    border: 3px solid #ffaeae !important;
+  border: 3px solid #ffaeae !important;
 }
