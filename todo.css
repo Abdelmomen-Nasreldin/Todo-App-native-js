@@ -137,11 +137,16 @@ main h3 {
   display: flex;
   align-items: center;
   margin: 0 10px;
+  margin-right: 20px;
 }
 .todo--item--done input {
   accent-color: #ce6b6b;
   width: 18px;
   min-height: 18px;
+}
+
+.todo--item--delete {
+  color: #ce6b6b;
 }
 
 footer {

@@ -16,8 +16,8 @@ header {
     color: #fff;
     padding: $main-padding 10px;
 
-    .contanier {
-    }
+    // .container {
+    // }
     p {
         text-align: center;
         font-size: 2em;
@@ -137,11 +137,16 @@ main {
     display: flex;
     align-items: center;
     margin: 0 10px;
+    margin-right: 20px;
+
     input {
         accent-color: $main-color;
         width: 18px;
         min-height: 18px;
     }
+}
+.todo--item--delete {
+    color: $main-color;
 }
 
 footer {

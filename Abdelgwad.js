@@ -1,16 +1,16 @@
 // helper function
 const curry = function (callback) {
-    return function(...args) {
-        if(args.length === 0){
+    return function (...args) {
+        if (args.length === 0) {
             return callback.call(this)
         }
-        return curry((...otherArgs)=> callback.call(this, ...args, ...otherArgs))
+        return curry((...otherArgs) => callback.call(this, ...args, ...otherArgs))
     }
 }
 
 // pure functions
 let createElementTemplateHandler = curry((
-    elementType ,
+    elementType,
     elementInnerHtml,
     elementClassName,
 ) => {
@@ -24,12 +24,12 @@ let createElementTemplateHandler = curry((
 const toggleErrorClass = curry((element, className, predicate) => {
     if (predicate(element)) {
         element.classList.add(className);
-    }else{
+    } else {
         element.classList.remove(className);
     }
 })
 
-const toggleInputErrorClass = toggleErrorClass(addTodoInput,'error')
+const toggleInputErrorClass = toggleErrorClass(addTodoInput, 'error')
 
 const div = createElementTemplateHandler('div')
 
@@ -37,7 +37,7 @@ const div = createElementTemplateHandler('div')
 
 const createTodoItemDomHandler = (todoText) => {
 
-    const todoItem = div("","todo--item")();
+    const todoItem = div("", "todo--item")();
 
     let todoItemText = div(
         todoText,
@@ -52,10 +52,10 @@ const createTodoItemDomHandler = (todoText) => {
         "todo--item--delete"
     )();
 
-    todoItemDelete.onclick=()=>{
+    todoItemDelete.onclick = () => {
         todoItem.remove()
     }
-    todoItem.append(todoItemText,todoItemDone, todoItemDelete )
+    todoItem.append(todoItemText, todoItemDone, todoItemDelete)
 
     return todoItem
 };
@@ -88,15 +88,15 @@ function moveFromDoneItemsDomToTodoList(evt) {
 
 
 
-const app = ()=> {
+const app = () => {
     let todoContainer = document.querySelector(".todo--outer--container");
     let addTodoBtn = todoContainer.querySelector("#addTodo button");
     let addTodoInput = todoContainer.querySelector("#addTodo input");
     let todoList = todoContainer.querySelector("#todoList");
     let doneItemsDom = document.querySelector("#todoDoneItems");
 
-    addTodoBtn.addEventListener("click", ()=> {
-        toggleInputErrorClass((element)=>element.value.length < 1)()
+    addTodoBtn.addEventListener("click", () => {
+        toggleInputErrorClass((element) => element.value.length < 1)()
 
         if (addTodoInput.value.length < 1) {
             return;
