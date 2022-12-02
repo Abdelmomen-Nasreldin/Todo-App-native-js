@@ -89,6 +89,7 @@ main #addTodo input#addTodoInput {
   box-shadow: 0px 0px 4px 1px #dadada;
   margin: 10px auto;
   max-width: 100%;
+  caret-color: #ce6b6b;
 }
 main #addTodo button {
   min-height: 35px;
