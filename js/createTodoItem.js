@@ -1,4 +1,5 @@
 import * as classes from "./constants.js";
+import * as dragAndDrop from './dragAndDrop.js'
 import { deleteTodoItemHandler } from './deleteTodoItem.js'
 
 
@@ -22,10 +23,13 @@ export function createTodoItemDomHandler(todoText) {
         classes.TODO_ITEM_DELETE_CLASS
     );
 
-    todoItemDom.append(todoItemTextDom, todoItemDoneDom, todoItemDeleteDom)
+    todoItemDom.append(todoItemTextDom, todoItemDoneDom, todoItemDeleteDom);
+    
+    todoItemDom.setAttribute("draggable", "true");
+    todoItemDom.addEventListener("dragstart", dragAndDrop.dragStartHandler);
+    todoItemDom.addEventListener("dragend", dragAndDrop.dragEndHandler);
 
-
-    todoItemDeleteDom.addEventListener("click", deleteTodoItemHandler.bind(null, todoItemDom))
+    todoItemDeleteDom.addEventListener("click", deleteTodoItemHandler.bind(null, todoItemDom));
 
     return todoItemDom
 };

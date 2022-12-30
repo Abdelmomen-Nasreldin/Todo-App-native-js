@@ -68,7 +68,7 @@ main {
         display: flex;
         flex-direction: column;
         background: #f0f0f0;
-        padding: $main-padding;
+        padding-top: $main-padding;
         height: fit-content;
         border-radius: 10px;
     }
@@ -106,9 +106,9 @@ main {
         }
     }
 
-    #todo--list {
-        max-width: 400px;
-        margin: auto;
+    #todoList {
+        padding: $main-padding;
+        border-radius: 10px;
     }
 
     #todoDoneItems {
@@ -165,4 +165,10 @@ footer {
 
 .error {
     border: 3px solid #ffaeae !important;
+}
+.dragging{
+    border: 1px dashed #ce6b6b;
+}
+.bordered{
+    border: 1px dashed #ce6b6b;
 }

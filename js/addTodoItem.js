@@ -11,9 +11,11 @@ export let addTodoItemHandler = (inputEl, todoBox) => {
 
     let todoItemDom = createTodoItemDomHandler(inputValue);
     todoItemDom.id = idGenerator++;
-    todoBox.prepend(todoItemDom);
+    todoBox.append(todoItemDom);
     inputEl.value = "";
     console.log(`new item with id = ${todoItemDom.id} => was added to Todo List`);
+
+
     return todoItemDom;
 };
 

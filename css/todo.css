@@ -66,7 +66,7 @@ main .todo--outer--container {
   display: flex;
   flex-direction: column;
   background: #f0f0f0;
-  padding: 15px;
+  padding-top: 15px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -103,9 +103,9 @@ main #addTodo button {
   justify-content: center;
   margin: 10px auto;
 }
-main #todo--list {
-  max-width: 400px;
-  margin: auto;
+main #todoList {
+  padding: 15px;
+  border-radius: 10px;
 }
 main #todoDoneItems {
   padding: 10px 15px;
@@ -164,4 +164,12 @@ footer p {
 
 .error {
   border: 3px solid #ffaeae !important;
+}
+
+.dragging {
+  border: 1px dashed #ce6b6b;
+}
+
+.bordered {
+  border: 1px dashed #ce6b6b;
 }/*# sourceMappingURL=todo.css.map */
