@@ -3,6 +3,7 @@ import * as dragAndDrop from './dragAndDrop.js'
 import { deleteTodoItemHandler } from './deleteTodoItem.js'
 
 
+
 // MAIN  function //////////////////
 export function createTodoItemDomHandler(todoText) {
     let todoItemDom = createElementHandler("div", "", classes.TODO_ITEM_CLASS);
@@ -22,7 +23,7 @@ export function createTodoItemDomHandler(todoText) {
         classes.DELETE_ICON,
         classes.TODO_ITEM_DELETE_CLASS
     );
-
+   
     todoItemDom.append(todoItemTextDom, todoItemDoneDom, todoItemDeleteDom);
     
     todoItemDom.setAttribute("draggable", "true");
@@ -35,7 +36,7 @@ export function createTodoItemDomHandler(todoText) {
 };
 
 // helper functions ////////////////////
-function createElementHandler(
+export function createElementHandler(
     elementType = "div",
     elementInnerHtml = "",
     elementClassName = ""
